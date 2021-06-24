@@ -41,7 +41,8 @@ public:
 
     QByteArray formatLine(QByteArray &lineArray)
     {
-        QString line = QString::fromAscii(lineArray.data(), lineArray.size());
+//        QString line = QString::fromAscii(lineArray.data(), lineArray.size());
+        QString line = QString::fromLatin1(lineArray.data(), lineArray.size());
 
         for(QList<QPair<QRegExp, QString> >::const_iterator it = mapping.constBegin();
             it != mapping.constEnd(); ++it)
@@ -49,7 +50,8 @@ public:
             line.replace(it->first, it->second);
         }
 
-        QByteArray out = line.toAscii();
+//        QByteArray out = line.toAscii();
+         QByteArray out = line.toLatin1();
         out.append('\n');
         return out;
     }

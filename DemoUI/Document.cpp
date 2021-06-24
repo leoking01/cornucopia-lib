@@ -386,7 +386,8 @@ vector<Document::Sketch> Document::_readNative(QTextStream &stream)
             if(!it3.value().isNumber())
                 continue;
             
-            QByteArray nameArray = it3.name().toAscii();
+//            QByteArray nameArray = it3.name().toAscii();
+              QByteArray nameArray = it3.name().toLatin1();
             std::string name(nameArray.constData(), nameArray.length());
             double value = it3.value().toNumber();
 

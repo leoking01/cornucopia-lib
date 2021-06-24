@@ -57,7 +57,8 @@ void DebuggingImpl::printf(const char *fmt, ...)
 
     std::printf("%s\n", buffer);
 
-    emit print(QString::fromAscii(buffer));
+//    emit print(QString::fromAscii(buffer));
+      emit print(QString::fromLatin1(buffer));
 }
 
 void DebuggingImpl::startTiming(const string &description)
