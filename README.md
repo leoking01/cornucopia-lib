@@ -44,4 +44,4 @@ in SimpleAPI yet--you need to call fitter.setOversketchBase,
 passing the curve being oversketched.
 
 
-<img src=2021-06-24 22-42-32 的屏幕截图.png />
+<img src=2021-06-2422-42-32的屏幕截图.png />
